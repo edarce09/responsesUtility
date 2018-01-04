@@ -36,7 +36,7 @@ const gone = function permanentlyRemoved(res, data){
 
 
 const serverError = function (res, data, err){
- let responce = {
+ let response = {
    code: 'ERROR_INTERNAL_SERVER_ERROR',
    message: err || 'An error has ocurred with in the server', 
    data: data || {}
