@@ -48,5 +48,6 @@ const serverError = function (res, data, err){
 module.exports = {
   ok,
   notFound,
+  created,
   serverError
 }
