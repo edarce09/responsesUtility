@@ -1,6 +1,6 @@
 {
   "name": "oz_responses",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "utility package for responses in ozErp",
   "main": "index.js",
   "scripts": {
