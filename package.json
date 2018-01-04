@@ -1,0 +1,26 @@
+{
+  "name": "oz_responses",
+  "version": "1.0.0",
+  "description": "utility package for responses in ozErp",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edarce09/responsesUtility.git"
+  },
+  "keywords": [
+    "oz",
+    "erp",
+    "http",
+    "responses",
+    "res"
+  ],
+  "author": "eduardo arce kirsch",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/edarce09/responsesUtility/issues"
+  },
+  "homepage": "https://github.com/edarce09/responsesUtility#readme"
+}
