@@ -1,3 +1,9 @@
+/**
+ * ok response
+ * @constructor
+ * @param {Object} res - Response to return
+ * @param {Object} data - Data or Document to return
+ */
 const ok = function succesfullOperation(res, data) {
   let response = {
     code: 'ok',
