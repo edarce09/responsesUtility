@@ -22,6 +22,14 @@ const created = function documentSuccessfullyCreated(res, data){
   return res.status(201).json(response);
 }
 
+const badRequest = function(res, param){
+ let response = {
+   code: 'BAD_REQUEST',
+   message: 'Missing '+param+' parameter'
+ };
+ return res.status(400).json(response);
+}
+
 const notFound = function informationNotFounded(res, data) {
   let response = {
     code: 'ERROR_NOT_FOUND',
@@ -40,12 +48,21 @@ const gone = function permanentlyRemoved(res, data){
   return res.status(410).json(response);
 }
 
+const duplicated = function permanentlyRemoved(res, err){
+  let dupParam = err.errmsg.split('"');
+  let response = {
+    code: "I'MA TEAPOD",
+    message: 'Duplicated parameter: '+dupParam[1],
+    };
+  return res.status(418).json(response);
+}
 
-const serverError = function (res, data, err){
+const serverError = function(res, data, err){
  let response = {
    code: 'ERROR_INTERNAL_SERVER_ERROR',
    message: err || 'An error has ocurred with in the server', 
-   data: data || {}
+   data: data || {},
+   err: err
  };
  return res.status(500).json(response);
 }
@@ -53,7 +70,10 @@ const serverError = function (res, data, err){
 
 module.exports = {
   ok,
-  notFound,
   created,
+  badRequest,
+  notFound,
+  gone,
+  duplicated,
   serverError
 }
